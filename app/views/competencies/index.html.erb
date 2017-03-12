@@ -1,0 +1,23 @@
+<h1>Manage a Competency</h1></br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Competencies</th>
+<!--       <th></th>
+      <th></th>
+      <th></th> -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competencies.each do |competency| %>
+      <tr>
+        <td><%= competency.name %></td>
+<!--         <td><%= link_to 'Show', competency %></td>
+        <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
+        <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

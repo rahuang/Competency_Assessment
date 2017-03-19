@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Competencies</th>
+      <th>Description</th>
 <!--       <th></th>
       <th></th>
       <th></th> -->
@@ -14,6 +15,7 @@
     <% @competencies.each do |competency| %>
       <tr>
         <td><%= competency.name %></td>
+        <td><%= competency.description %></td>
 <!--         <td><%= link_to 'Show', competency %></td>
         <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
         <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
@@ -21,3 +23,9 @@
     <% end %>
   </tbody>
 </table>
+
+<h4>Import Data</h4>
+<%= form_tag import_competencies_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %> 

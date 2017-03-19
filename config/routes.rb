@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :competencies do
     collection { post :import }
   end
+  resources :imports do
+    collection { post :parse }
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

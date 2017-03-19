@@ -6,6 +6,16 @@ class CompetenciesController < ApplicationController
     @competencies = Competency.all
   end
 
+  def new
+    @competency = Competency.new
+    # @competency.attributes = {name: "", description: "temp"}
+    # if @competency.save
+    #   redirect_to competencies_path, notice: "Successfully created #{@competency.name}"
+    # else
+    #   render "new"
+    # end
+  end
+
   def import
     file = params[:file]
     CSV.foreach(file.path, {:headers => true, :encoding => 'ISO-8859-1'}) do |row|

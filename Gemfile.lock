@@ -126,6 +126,11 @@ GEM
     roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
+    roo-xls (1.0.0)
+      nokogiri
+      roo (>= 2.0.0beta1, < 3)
+      spreadsheet (> 0.9.0)
+    ruby-ole (1.2.12.1)
     ruby-progressbar (1.8.1)
     rubyzip (1.2.1)
     sass (3.4.22)
@@ -151,6 +156,8 @@ GEM
     simplecov-html (0.10.0)
     single_test (0.6.0)
       rake
+    spreadsheet (1.1.4)
+      ruby-ole (>= 1.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -191,6 +198,7 @@ DEPENDENCIES
   populator3
   rails (= 4.2.5)
   roo (~> 2.7.0)
+  roo-xls
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda
